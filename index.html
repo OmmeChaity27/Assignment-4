@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[#F8FAFC] min-h-screen p-4 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-[#0F172A] mb-8">CareerFlow Dashboard</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <p class="text-slate-500 font-semibold text-sm">Total Jobs</p>
+                <h2 id="total-count" class="text-4xl font-bold mt-2 text-slate-800">0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <p class="text-green-500 font-semibold text-sm">Interview</p>
+                <h2 id="interview-count" class="text-4xl font-bold mt-2 text-green-600">0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <p class="text-red-500 font-semibold text-sm">Rejected</p>
+                <h2 id="rejected-count" class="text-4xl font-bold mt-2 text-red-600">0</h2>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-end mb-6">
+            <div>
+                <h2 class="text-xl font-bold text-slate-800">Available Jobs</h2>
+                <div class="flex gap-2 mt-4">
+                    <button onclick="changeTab('all')" id="tab-all"
+                        class="px-4 py-1.5 rounded-md text-sm font-medium transition bg-blue-600 text-white">All</button>
+                    <button onclick="changeTab('interview')" id="tab-interview"
+                        class="px-4 py-1.5 rounded-md text-sm font-medium transition bg-white border text-slate-600 hover:bg-slate-50">Interview</button>
+                    <button onclick="changeTab('rejected')" id="tab-rejected"
+                        class="px-4 py-1.5 rounded-md text-sm font-medium transition bg-white border text-slate-600 hover:bg-slate-50">Rejected</button>
+                </div>
+            </div>
+            <p id="job-total-text" class="text-slate-400 text-sm font-medium pb-1">0 jobs</p>
+        </div>
+
+        <div id="jobs-container" class="space-y-4">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
