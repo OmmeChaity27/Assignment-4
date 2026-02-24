@@ -114,7 +114,7 @@ function render() {
             <p class="text-blue-500 text-sm font-semibold mb-2">${job.position}</p>
             
             <div class="flex flex-wrap gap-4 text-slate-400 text-xs font-medium mb-4">
-                <span>${job.location}</span> • <span>${job.type}</span> • <span>${job.salary}</span>
+                <span>${job.location}</span> . <span>${job.type}</span> . <span>${job.salary}</span>
             </div>
 
             <span class="inline-block px-2 py-1 rounded text-[10px] font-bold uppercase mb-4 ${getStatusStyle(job.status)}">
